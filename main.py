@@ -1,17 +1,21 @@
 
-# Python program to separate character in a given string.
+# Python program to count alphabets, digits and special characters from string.
 
-string = "Hello Bridgelabz..!"
+string = "Bridgelabz*abcd*()_+12211!!!@sid4python12"
 
-character_list1 = list(string)  # Converting string into list data type.
+alphabets = digits = special = 0
 
-print("Original String : ", string)
+for i in range(len(string)):
 
-print("Character List 1 :", character_list1)
+    if (string[i].isalpha()):   # isalpha() checking at string[index] alphabet present.
+        alphabets = alphabets + 1
 
-print("Character List 2 :", [*string])  # Split a string into a Python list using unpack(*) method
+    elif (string[i].isdigit()): # isdigit() checking at string[index] digit present.
+        digits = digits + 1
 
-# Output :
-# Original String :  Hello Bridgelabz..!
-# Character List 1 : ['H', 'e', 'l', 'l', 'o', ' ', 'B', 'r', 'i', 'd', 'g', 'e', 'l', 'a', 'b', 'z', '.', '.', '!']
-# Character List 2 : ['H', 'e', 'l', 'l', 'o', ' ', 'B', 'r', 'i', 'd', 'g', 'e', 'l', 'a', 'b', 'z', '.', '.', '!']
+    else:
+        special = special + 1
+
+print("\nTotal Number of Alphabets in this String :  ", alphabets)
+print("Total Number of Digits in this String :  ", digits)
+print("Total Number of Special Characters in this String :  ", special)
