@@ -1,10 +1,10 @@
 
-# Python program to convert Celsius to Fahrenheit .
+# Python program to convert Fahrenheit to Celsius.
 
-celsius = int(input("Enter Temperature in Celsius : "))
+fahrenheit = float(input("Enter Temperature in Fahrenheit : "))
 
-print("Temperature :", celsius, "°C")
+print("Temperature in Fahrenheit:", fahrenheit, "°F")
 
-fahrenheit = celsius * 1.8 + 32
+celsius = (fahrenheit - 32) * 5/9
 
-print("Temperature in Fahrenheit :", round(fahrenheit, 2), "°F")
+print("Temperature in Celsius :", round(celsius, 2), "°C")
