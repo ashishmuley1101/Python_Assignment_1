@@ -1,11 +1,15 @@
 
-# Python program to calculate simple interest.
+# Python program to remove blank space from string.
 
-principal_amount = float(input("Enter the Principal Amount : "))
-rate_interest = float(input("Enter the Rate of Interest in % : "))
-time = float(input("Enter the Time(in year) for amount leading : "))
+string_text = " \nHi   hello fr om bridgelabz . "
 
-simple_interest = (principal_amount * rate_interest * time) / 100
+new_string1 = "".join(string_text.split())
+new_string2 = string_text.replace(" ", "")
 
-print("Simple Interest for", principal_amount, "Rs.", "with rate interest", rate_interest, "% for",
-    time, "year is",simple_interest, "Rs.")
+print("New String1 :", new_string1)
+print("New String2 :", new_string2)
+
+# Output :
+# New String1 : Hihellofrombridgelabz.
+# New String2 :
+# Hihellofrombridgelabz.
