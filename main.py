@@ -1,15 +1,10 @@
 
-# Python program to check given year is a leap year or not.
+# Python program to convert Celsius to Fahrenheit .
 
-year = int(input("Enter Year : "))
+celsius = int(input("Enter Temperature in Celsius : "))
 
-print("Year : ", year)
+print("Temperature :", celsius, "°C")
 
-if year == 0:
-        print("Enter the valid year..!")
+fahrenheit = celsius * 1.8 + 32
 
-elif (((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)):
-        print("Specified year is a leap year.")
-
-else:
-        print("Specified year is not a leap year.")
+print("Temperature in Fahrenheit :", round(fahrenheit, 2), "°F")
