@@ -1,21 +1,15 @@
 
-# Python program to count alphabets, digits and special characters from string.
+# Python program to print highest frequency character in a string.
 
-string = "Bridgelabz*abcd*()_+12211!!!@sid4python12"
+from collections import Counter
 
-alphabets = digits = special = 0
+string = "Hello from bridgelabz, welcome here"
 
-for i in range(len(string)):
+print ("The original string is : " + string)
 
-    if (string[i].isalpha()):   # isalpha() checking at string[index] alphabet present.
-        alphabets = alphabets + 1
+res = Counter(string) # using collections.Counter() getting the all char in key value pair with no. of count.
 
-    elif (string[i].isdigit()): # isdigit() checking at string[index] digit present.
-        digits = digits + 1
+res = max(res, key = res.get)  # max() getting key with max no. of count
 
-    else:
-        special = special + 1
+print ("The highest frequency characters in a string : ", res)
 
-print("\nTotal Number of Alphabets in this String :  ", alphabets)
-print("Total Number of Digits in this String :  ", digits)
-print("Total Number of Special Characters in this String :  ", special)
