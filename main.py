@@ -1,15 +1,17 @@
 
-# Python program to remove blank space from string.
+# Python program to separate character in a given string.
 
-string_text = " \nHi   hello fr om bridgelabz . "
+string = "Hello Bridgelabz..!"
 
-new_string1 = "".join(string_text.split())
-new_string2 = string_text.replace(" ", "")
+character_list1 = list(string)  # Converting string into list data type.
 
-print("New String1 :", new_string1)
-print("New String2 :", new_string2)
+print("Original String : ", string)
+
+print("Character List 1 :", character_list1)
+
+print("Character List 2 :", [*string])  # Split a string into a Python list using unpack(*) method
 
 # Output :
-# New String1 : Hihellofrombridgelabz.
-# New String2 :
-# Hihellofrombridgelabz.
+# Original String :  Hello Bridgelabz..!
+# Character List 1 : ['H', 'e', 'l', 'l', 'o', ' ', 'B', 'r', 'i', 'd', 'g', 'e', 'l', 'a', 'b', 'z', '.', '.', '!']
+# Character List 2 : ['H', 'e', 'l', 'l', 'o', ' ', 'B', 'r', 'i', 'd', 'g', 'e', 'l', 'a', 'b', 'z', '.', '.', '!']
