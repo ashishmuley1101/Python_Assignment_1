@@ -1,15 +1,24 @@
 
-# Python program to print highest frequency character in a string.
+# Python program to replace first occurrence of vowel with "_" in string.
 
-from collections import Counter
+str = input("Enter the String: ")
+replace_char = input("Enter a character to replace : ")
 
-string = "Hello from bridgelabz, welcome here"
+flag = 0
+new_string = ""
 
-print ("The original string is : " + string)
+for i in range(len(str)):
 
-res = Counter(string) # using collections.Counter() getting the all char in key value pair with no. of count.
+    if flag == 0:
+        if str[i]=='a' or str[i]=='e' or str[i]=='i' or str[i]=='o' or str[i]=='u'\
+           or str[i]=='A' or str[i]=='E' or str[i]=='I' or str[i]=='O' or str[i]=='U':
+            new_string = new_string + replace_char
+            flag = 1
+        else:
+            new_string = new_string + str[i]
+    else:
+        new_string = new_string + str[i]
 
-res = max(res, key = res.get)  # max() getting key with max no. of count
-
-print ("The highest frequency characters in a string : ", res)
+print("\nOriginal String:", str)
+print("New String:", new_string)
 
